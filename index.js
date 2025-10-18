@@ -1,6 +1,6 @@
 import express from 'express';
-import consolesRoutes from './routes/consoles.js';
 import gamesRoutes from './routes/games.js';
+import consolesRoutes from './routes/consoles.js';
 import methodOverride from 'method-override';
 import {PORT, SECRET_JWT_KEY} from './config.js'
 import { UserRepository } from './user-repository.js';
@@ -10,14 +10,12 @@ import cookieParser from 'cookie-parser';
 const app = express();
 app.use(express.json());
 app.use(cookieParser())
-app.use(express.static("public"));
+app.use(express.static("public")); // Càrrega CSS i altres fitxers públics
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs'); // Motor de plantilles
 app.set('views', './views'); // Ubicació de les plantilles
-
-
 
 //inicio middleware
 app.use((req,res,next)=>{
@@ -32,28 +30,36 @@ app.use((req,res,next)=>{
     next() 
 })
 
-app.use((req,res,next) =>{
-    const token = req.cookies.access_token
-    req.session = {user:null}
-    try{
-        const data = jwt.verify(token, SECRET_JWT_KEY)
-        req.session.user = data
-    }catch(error){
-    req.session.user = null
-    }
-})
-
-app.use('/consoles', consolesRoutes);
 app.use('/games', gamesRoutes);
+app.use('/consoles', consolesRoutes);
 
-app.get('/',(req,res) =>{
-    const {user} = req.session
-    res.render('login',user)
+app.get('/',(req,res)=>{
+    const {user}=req.session
+    res.render('register',user)
+});   
+app.post('/login', async (req,res)=>{
+    try{
+        const {username,password}=req.body
+        const user = await UserRepository.login({username,password})
+        const token = jwt.sign(
+            {id: user._id, username: user.username},
+            SECRET_JWT_KEY, 
+            {
+            expiresIn:'1h'
+            })
+        res
+        .cookie('access_token',token,{
+            httpOnly:true, 
+            
+            secure: process.env.NODE_ENV==='production',
+            sameSite:'strict', 
+            maxAge:1000*60*60 
+        })
+        .send({ user,token })
+    }catch (error){
+        res.status(401).send(error.message)
+    }
 });
-
-/*--------------------------
-        REGISTRO
---------------------------*/
 app.post('/register', async (req,res)=>{
     
     const {username,password}=req.body
@@ -65,8 +71,22 @@ app.post('/register', async (req,res)=>{
         res.status(400).send(error.message)
     }
 });
-
-/*--------------------------
-        INICIO SESIÓN
---------------------------*/
-
+app.post('/logout',(req,res)=>{
+    res
+    .clearCookie('access_token')
+    .json({message:'logout successfull'})
+    .send('logout');
+});
+app.get('/protected2',(req,res)=>{
+    const {user}=req.session
+    if (!user) return res.status(403).send('acceso no autorizado')
+    res.render('protected',user)
+});
+app.get('/protected',(req,res)=>{
+    const {user}=req.session
+    if (!user) return res.status(403).send('acceso no autorizado')
+    res.render('home',user)
+});
+app.listen(PORT,()=>{
+    console.log(`Server running on port${PORT}`);
+});

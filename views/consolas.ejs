@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+</head>
+<body>
+    <h1>Lista de consolas</h1>
+
+    <div class="listaConsola">
+        <% data.consolas.forEach(consola =>{ %>
+        <div class="consola">
+            <img class="imagenConsola" src="<%= consola.imagen %>" alt="">
+            <h2 class="tituloConsola"><%= consola.nombre %></h2>
+            <h3 class="valoracionesConsola"><%= consola.valoraciones%></h3>
+        </div>
+        <% }) %>
+    </div>
+    
+</body>
+</html>
