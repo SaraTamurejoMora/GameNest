@@ -1,7 +1,7 @@
 import express from 'express';
-import consolestRoutes from './routes/consoles.js';
-import gamesRoutesRoutes from './routes/games.js';
-//import methodOverride from 'method-override';
+import consolesRoutes from './routes/consoles.js';
+import gamesRoutes from './routes/games.js';
+import methodOverride from 'method-override';
 import {PORT, SECRET_JWT_KEY} from './config.js'
 import { UserRepository } from './user-repository.js';
 import jwt from 'jsonwebtoken'

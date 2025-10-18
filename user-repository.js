@@ -29,7 +29,7 @@ export class UserRepository{
         return id
     }
 
-    static async login({username,password})
+    static async login({username,password}){}
 }
 
 

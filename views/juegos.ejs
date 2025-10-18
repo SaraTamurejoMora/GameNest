@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+</head>
+<body>
+    <h1>Lista de juegos</h1>
+
+    <div class="listaJuego">
+        <% data.juegos.forEach(juego =>{ %>
+        <div class="juego">
+            <img class="imagenJuego" src="<%= juego.foto %>" alt="">
+            <h2 class="tituloJuego"><%= juego.titulo %></h2>
+            <h3 class="plataformasJuego">Plataformas: Pc, consolas</h3>
+            <h3 class="valoracionesJuego"><%= juego.valoraciones%></h3>
+        </div>
+        <% }) %>
+    </div>
+    
+</body>
+</html>
