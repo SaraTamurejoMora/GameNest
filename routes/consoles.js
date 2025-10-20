@@ -7,6 +7,11 @@ const router = express.Router();
 const readData = () => JSON.parse(fs.readFileSync('./db/db.json'));
 const writeData = (data) => fs.writeFileSync('./db/db.json', JSON.stringify(data));
 
+
+router.get('/crear', (req, res) => {
+  res.render('crearConsola');
+});
+
 //ver -- get todo
 
 router.get('/',(req,res) => {
@@ -41,6 +46,7 @@ router.get('/:id',(req,res) => {
 
 //crear --post
 
+
 router.post('/',(req,res) => {
 
     const data = readData();
@@ -49,7 +55,8 @@ router.post('/',(req,res) => {
     const nuevaConsola = { id: data.consolas.length + 1, imagen, nombre, valoracion };
     data.consolas.push(nuevaConsola);
     writeData(data);
-    res.json(nuevaConsola);
+     const newdata = readData();
+    res.render ("consolas", newdata);
 
 })
 
@@ -59,7 +66,7 @@ router.put('/:id', (req, res) => {
     const data = readData();
     const id = parseInt(req.params.id);
     const consolaIndex = data.consolas.findIndex(p => p.id === id);
-    if (consolaIndex === -1) return res.status(404).send('Consola no encontrado');
+    if (consolaIndex === -1) return res.status(404).send('Consola no encontrada');
     data.consolas[consolaIndex] = { ...data.consolas[consolaIndex], ...req.body };
     writeData(data);
     const newdata = readData();

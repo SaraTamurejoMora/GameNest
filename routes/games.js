@@ -7,6 +7,9 @@ const router = express.Router();
 const readData = () => JSON.parse(fs.readFileSync('./db/db.json'));
 const writeData = (data) => fs.writeFileSync('./db/db.json', JSON.stringify(data));
 
+
+
+
 //ver -- get todo
 
 router.get('/',(req,res) => {
@@ -17,6 +20,30 @@ router.get('/',(req,res) => {
 
 
 } )
+
+
+//crear juegos
+
+router.get('/crear', (req, res) => {
+  res.render('crearJuego');
+});
+
+// Crear un nuevo juego
+router.post('/', (req, res) => {
+  const data = readData();
+  const { titulo, descripcion, anio_publicacion, valoracion, foto } = req.body;
+
+  if (!titulo || !foto || !valoracion || !descripcion || !anio_publicacion) {
+    return res.status(400).send('Faltan campos obligatorios (título, foto, valoración)');
+  }
+
+    const nuevoJuego = { id: data.juegos.length + 1, titulo, descripcion, anio_publicacion, valoracion, foto };
+
+
+  data.juegos.push(nuevoJuego);
+  writeData(data);
+  res.redirect('/games');
+});
 
 router.get('/editGames/:id', (req, res) => {
     const data = readData();
