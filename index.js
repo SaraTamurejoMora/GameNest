@@ -87,6 +87,9 @@ app.get('/protected',(req,res)=>{
     if (!user) return res.status(403).send('acceso no autorizado')
     res.render('home',user)
 });
+
+
+
 app.listen(PORT,()=>{
     console.log(`Server running on port${PORT}`);
 });

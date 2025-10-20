@@ -18,6 +18,15 @@ router.get('/',(req,res) => {
 
 } )
 
+router.get('/editConsola/:id', (req, res) => {
+    const data = readData();
+    const consola = data.consolas.find(p => p.id === parseInt(req.params.id));
+    
+    if (!consola) return res.status(404).send('Consola no encontrada');
+
+    res.render("editConsola", {consola});
+});
+
 //ver -- get una
 router.get('/:id',(req,res) => {
 
@@ -25,7 +34,7 @@ router.get('/:id',(req,res) => {
     const consola = data.consolas.find(p => p.id === parseInt(req.params.id));
     if (!consola) return res.status(404).send('La consola que buscas no existe');
 
-    res.render ("detalleConsola", juego);
+    res.render ("consolaDetalle", {consola});
 
 } )
 
@@ -53,8 +62,12 @@ router.put('/:id', (req, res) => {
     if (consolaIndex === -1) return res.status(404).send('Consola no encontrado');
     data.consolas[consolaIndex] = { ...data.consolas[consolaIndex], ...req.body };
     writeData(data);
-    res.json({ message: 'Consola actualizada!' });
+    const newdata = readData();
+    res.render ("consolas", newdata);
 });
+
+
+
 
 //eliminar -- delete
 
@@ -65,8 +78,12 @@ router.delete('/:id', (req, res) => {
     if (consolaIndex === -1) return res.status(404).send('Consola no encontrado');
     data.consolas.splice(consolaIndex, 1);
     writeData(data);
-    res.json({ message: 'Consola borrada correctamente' });
+    const newdata = readData();
+    res.render ("consolas", newdata);
 });
+
+
+
 
 
 

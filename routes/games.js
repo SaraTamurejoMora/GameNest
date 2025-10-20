@@ -18,6 +18,16 @@ router.get('/',(req,res) => {
 
 } )
 
+router.get('/editGames/:id', (req, res) => {
+    const data = readData();
+    const juego = data.juegos.find(p => p.id === parseInt(req.params.id));
+    
+    if (!juego) return res.status(404).send('Juego no encontrado');
+
+    res.render("editGames", {juego});
+});
+
+
 //ver -- get una
 router.get('/:id',(req,res) => {
 
@@ -25,9 +35,11 @@ router.get('/:id',(req,res) => {
     const juego = data.juegos.find(p => p.id === parseInt(req.params.id));
     if (!juego) return res.status(404).send('No existe el juego que buscas');
 
-    res.render ("detalleJuego", juego);
+    res.render ("detalleJuego", {juego});
 
 } )
+
+
 
 
 //crear --post
@@ -35,8 +47,8 @@ router.get('/:id',(req,res) => {
 router.post('/',(req,res) => {
 
     const data = readData();
-    const { imagen, titulo, valoracion} = req.body;
-    if (!imagen || !titulo|| !valoracion) return res.status(400).send('Necesitas rellenar todos los campos');
+    const { foto, titulo, valoracion} = req.body;
+    if (!foto || !titulo|| !valoracion) return res.status(400).send('Necesitas rellenar todos los campos');
     const nuevoJuego = { id: data.juegos.length + 1, imagen, titulo, valoracion };
     data.juegos.push(nuevoJuego);
     writeData(data);
@@ -53,7 +65,7 @@ router.put('/:id', (req, res) => {
     if (juegoIndex === -1) return res.status(404).send('Juego no encontrado');
     data.juegos[juegoIndex] = { ...data.juegos[juegoIndex], ...req.body };
     writeData(data);
-    res.json({ message: 'Juego actualizado!' });
+    res.redirect ("/games");
 });
 
 //eliminar -- delete
@@ -65,7 +77,8 @@ router.delete('/:id', (req, res) => {
     if (juegoIndex === -1) return res.status(404).send('Juego no encontrado');
     data.juegos.splice(juegoIndex, 1);
     writeData(data);
-    res.json({ message: 'Juego borrado correctamente' });
+   const newdata = readData();
+    res.render ("juegos", newdata);
 });
 
 
