@@ -43,7 +43,6 @@ router.get('/:id',(req,res) => {
 
 } )
 
-
 //crear --post
 
 
@@ -88,10 +87,6 @@ router.delete('/:id', (req, res) => {
     const newdata = readData();
     res.render ("consolas", newdata);
 });
-
-
-
-
 
 
 export default router;
