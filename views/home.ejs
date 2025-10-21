@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
     <h1>Home</h1>
-    <ul>
-        <li><a href="/games">Lista de Juegos</a></li>
-        <li><a href="/consoles">Lista de Consolas</a></li>
+    <div class="menu-horizontal">
 
-    </ul>
+        <a href="/games" class="menu-item">
+            <div class="icon">
+                <img src="img/consola-de-juego.png" alt="Tu Imagen" class="animated-img">
+            </div>
+            Juegos
+        </a>
+
+        <a href="/consoles" class="menu-item">
+            <div class="icon">
+                <img src="img/game-boy.png" alt="Tu Imagen" class="animated-img">
+            </div>
+            Consolas
+        </a>
+    </div>
+    <a href="/"> <button class="btn-back">Volver</button> </a>
+
+
 </body>
+
 </html>

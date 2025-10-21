@@ -1,1 +1,326 @@
-{"consolas":[{"id":1,"nombre":"Nintendo Switch","descripcion":"Consola híbrida portátil y sobremesa, ideal para juegos indie y AAA.","valoracion":"4.8","imagen":"https://example.com/images/switch.jpg","anio_salida":2017},{"id":2,"nombre":"PlayStation 5","descripcion":"Consola de nueva generación con gráficos de alta calidad y retrocompatibilidad.","valoracion":4.7,"imagen":"https://example.com/images/ps5.jpg","anio_salida":2020},{"id":3,"nombre":"PC","descripcion":"Plataforma versátil para juegos indie y AAA con soporte para mods.","valoracion":4.9,"imagen":"https://example.com/images/pc.jpg","anio_salida":1970},{"id":4,"nombre":"Xbox Series X","descripcion":"Consola potente de Microsoft con compatibilidad con juegos anteriores.","valoracion":4.6,"imagen":"https://example.com/images/xbox_series_x.jpg","anio_salida":2020},{"id":5,"nombre":"PlayStation 4","descripcion":"Consola popular de Sony con gran catálogo y juegos exclusivos.","valoracion":4.5,"imagen":"https://example.com/images/ps4.jpg","anio_salida":2013},{"id":7,"nombre":"Nintendo 3DS","descripcion":"Consola portátil con pantalla 3D y gran catálogo de RPGs y aventuras.","valoracion":4.3,"imagen":"https://example.com/images/3ds.jpg","anio_salida":2011},{"id":8,"nombre":"PlayStation Vita","descripcion":"Portátil de Sony con juegos exclusivos y gráficos impresionantes para su tamaño.","valoracion":4.2,"imagen":"https://example.com/images/vita.jpg","anio_salida":2011},{"id":9,"nombre":"Game Boy Advance","descripcion":"Clásica portátil de Nintendo con una enorme biblioteca de juegos retro.","valoracion":4.6,"imagen":"https://example.com/images/gba.jpg","anio_salida":2001},{"id":10,"nombre":"Wii U","descripcion":"Consola de Nintendo con gamepad táctil y enfoque en juegos familiares.","valoracion":4,"imagen":"https://example.com/images/wii_u.jpg","anio_salida":2012},{"id":11,"nombre":"Nintendo Wii","descripcion":"Consola innovadora con control de movimiento, famosa por su accesibilidad.","valoracion":4.5,"imagen":"https://example.com/images/wii.jpg","anio_salida":2006},{"id":12,"nombre":"PlayStation 3","descripcion":"Consola de Sony con gráficos avanzados para su época y gran catálogo multimedia.","valoracion":4.3,"imagen":"https://example.com/images/ps3.jpg","anio_salida":2006},{"id":13,"nombre":"Xbox 360","descripcion":"Consola de Microsoft con gran comunidad online y juegos exclusivos.","valoracion":4.4,"imagen":"https://example.com/images/xbox360.jpg","anio_salida":2005},{"id":14,"nombre":"Nintendo DS","descripcion":"Portátil de doble pantalla que revolucionó el mercado de los juegos portátiles.","valoracion":4.5,"imagen":"https://example.com/images/ds.jpg","anio_salida":2004},{"id":15,"nombre":"SEGA Genesis","descripcion":"Clásica consola retro con grandes juegos de los 90.","valoracion":4.2,"imagen":"https://example.com/images/genesis.jpg","anio_salida":1988},{"id":16,"nombre":"Super Nintendo","descripcion":"Clásica consola de 16 bits con RPGs y aventuras icónicas.","valoracion":4.7,"imagen":"https://example.com/images/snes.jpg","anio_salida":1990},{"id":17,"nombre":"PlayStation 2","descripcion":"Consola más vendida de la historia con miles de juegos y géneros diversos.","valoracion":4.8,"imagen":"https://example.com/images/ps2.jpg","anio_salida":2000},{"id":18,"nombre":"Xbox","descripcion":"Primera consola de Microsoft con enfoque en juegos online y gráficos 3D.","valoracion":4.1,"imagen":"https://example.com/images/xbox.jpg","anio_salida":2001},{"id":19,"nombre":"Atari 2600","descripcion":"Consola retro pionera que marcó el inicio de los videojuegos domésticos.","valoracion":4,"imagen":"https://example.com/images/atari.jpg","anio_salida":1977},{"id":20,"nombre":"Neo Geo","descripcion":"Consola arcade de SNK famosa por sus juegos de lucha y calidad gráfica de la época.","valoracion":4.3,"imagen":"https://example.com/images/neogeo.jpg","anio_salida":1990},{"id":20,"imagen":"https://example.com/images/switch.jpg","nombre":"a","valoracion":"8"}],"juegos":[{"id":1,"titulo":"Hollow Knighttt","descripcion":"Juego de acción y aventura metroidvania con un mundo oscuro y detallado.","anio_publicacion":2017,"valoracion":"4.9","foto":"https://example.com/images/hollow_knight.jpg"},{"id":2,"titulo":"Hollow Knight: Silksong","descripcion":"Secuela de Hollow Knight con nueva protagonista y habilidades.","anio_publicacion":2025,"valoracion":5,"foto":"https://example.com/images/silksong.jpg"},{"id":3,"titulo":"Stardew Valley","descripcion":"Simulador de granja con agricultura, pesca y relaciones sociales.","anio_publicacion":2016,"valoracion":4.8,"foto":"https://example.com/images/stardew_valley.jpg"},{"id":4,"titulo":"Little Witch in the Woods","descripcion":"RPG relajante con magia, exploración y mundo encantador.","anio_publicacion":2023,"valoracion":4.6,"foto":"https://example.com/images/little_witch.jpg"},{"id":5,"titulo":"Dredge","descripcion":"Exploración marina con pesca y misterios oscuros.","anio_publicacion":2023,"valoracion":4.5,"foto":"https://example.com/images/dredge.jpg"},{"id":6,"titulo":"Everhood","descripcion":"Juego de ritmo y aventura con estética surrealista y combates únicos.","anio_publicacion":2021,"valoracion":4.7,"foto":"https://example.com/images/everhood.jpg"},{"id":7,"titulo":"Undertale","descripcion":"RPG donde tus decisiones afectan la historia y puedes evitar combates.","anio_publicacion":2015,"valoracion":4.9,"foto":"https://example.com/images/undertale.jpg"},{"id":8,"titulo":"Helldivers","descripcion":"Shooter cooperativo top-down con humor y acción táctica.","anio_publicacion":2015,"valoracion":4.4,"foto":"https://example.com/images/helldivers.jpg"},{"id":9,"titulo":"Monster Hunter: World","descripcion":"RPG de acción cazando monstruos gigantes en un mundo abierto.","anio_publicacion":2018,"valoracion":4.7,"foto":"https://example.com/images/monster_hunter_world.jpg"},{"id":10,"titulo":"Monster Hunter: Rise","descripcion":"Cacería de monstruos con mecánicas mejoradas y nuevos escenarios.","anio_publicacion":2021,"valoracion":4.6,"foto":"https://example.com/images/monster_hunter_rise.jpg"},{"id":11,"titulo":"League of Legends","descripcion":"MOBA competitivo con estrategia y trabajo en equipo.","anio_publicacion":2009,"valoracion":4.5,"foto":"https://example.com/images/lol.jpg"},{"id":12,"titulo":"Celeste","descripcion":"Plataforma indie desafiante con historia emotiva y música increíble.","anio_publicacion":2018,"valoracion":4.9,"foto":"https://example.com/images/celeste.jpg"},{"id":13,"titulo":"Hades","descripcion":"Roguelike de acción con narrativa profunda y combates fluidos.","anio_publicacion":2020,"valoracion":5,"foto":"https://example.com/images/hades.jpg"},{"id":14,"titulo":"Cuphead","descripcion":"Run & gun con estética de dibujos animados clásicos y dificultad alta.","anio_publicacion":2017,"valoracion":4.8,"foto":"https://example.com/images/cuphead.jpg"},{"id":15,"titulo":"Ori and the Blind Forest","descripcion":"Plataforma y aventura con un arte visual impresionante y música épica.","anio_publicacion":2015,"valoracion":4.9,"foto":"https://example.com/images/ori_blind_forest.jpg"},{"id":16,"titulo":"Ori and the Will of the Wisps","descripcion":"Secuela de Ori con más exploración, combates y narrativa emotiva.","anio_publicacion":2020,"valoracion":5,"foto":"https://example.com/images/ori_wisps.jpg"},{"id":17,"titulo":"Dead Cells","descripcion":"Roguelike metroidvania con combate rápido y niveles generados proceduralmente.","anio_publicacion":2018,"valoracion":4.7,"foto":"https://example.com/images/dead_cells.jpg"},{"id":18,"titulo":"The Binding of Isaac: Rebirth","descripcion":"Roguelike de acción con mazmorras aleatorias y enemigos extraños.","anio_publicacion":2014,"valoracion":4.6,"foto":"https://example.com/images/binding_isaac.jpg"},{"id":19,"titulo":"Terraria","descripcion":"Sandbox de aventuras, construcción y exploración con elementos RPG.","anio_publicacion":2011,"valoracion":4.7,"foto":"https://example.com/images/terraria.jpg"},{"id":20,"titulo":"Slay the Spire","descripcion":"Juego de cartas roguelike con mecánicas estratégicas y rejugabilidad alta.","anio_publicacion":2019,"valoracion":4.8,"foto":"https://example.com/images/slay_spire.jpg"},{"id":21,"titulo":"hola","descripcion":"ttttt","anio_publicacion":"2007","valoracion":"5","foto":"https://example.com/images/hollow_knight.jpg"}]}
+{
+    "consolas": [
+        {
+            "id": 1,
+            "nombre": "Nintendo Switch",
+            "descripcion": "Consola híbrida portátil y sobremesa, ideal para juegos indie y AAA.",
+            "valoracion": "4.8",
+            "imagen": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_136553202?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402",
+            "anio_salida": 2017
+        },
+        {
+            "id": 2,
+            "nombre": "PlayStation 5",
+            "descripcion": "Consola de nueva generación con gráficos de alta calidad y retrocompatibilidad.",
+            "valoracion": 4.7,
+            "imagen": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21",
+            "anio_salida": 2020
+        },
+        {
+            "id": 3,
+            "nombre": "PC",
+            "descripcion": "Plataforma versátil para juegos indie y AAA con soporte para mods.",
+            "valoracion": 4.9,
+            "imagen": "https://m.media-amazon.com/images/I/81JlCSDZ3AL.jpg",
+            "anio_salida": 1970
+        },
+        {
+            "id": 4,
+            "nombre": "Xbox Series X",
+            "descripcion": "Consola potente de Microsoft con compatibilidad con juegos anteriores.",
+            "valoracion": 4.6,
+            "imagen": "https://m.media-amazon.com/images/I/61nq7mC0tHL.jpg",
+            "anio_salida": 2020
+        },
+        {
+            "id": 5,
+            "nombre": "PlayStation 4",
+            "descripcion": "Consola popular de Sony con gran catálogo y juegos exclusivos.",
+            "valoracion": 4.5,
+            "imagen": "https://m.media-amazon.com/images/I/71p-VtbsvEL.jpg",
+            "anio_salida": 2013
+        },
+        {
+            "id": 7,
+            "nombre": "Nintendo 3DS",
+            "descripcion": "Consola portátil con pantalla 3D y gran catálogo de RPGs y aventuras.",
+            "valoracion": 4.3,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Nintendo-3DS-AquaOpen.png",
+            "anio_salida": 2011
+        },
+        {
+            "id": 8,
+            "nombre": "PlayStation Vita",
+            "descripcion": "Portátil de Sony con juegos exclusivos y gráficos impresionantes para su tamaño.",
+            "valoracion": 4.2,
+            "imagen": "https://static.fnac-static.com/multimedia/ES/images_produits/ES/ZoomPE/2/9/6/0711719180692/tsp20120217191002/PS-VITA-Wi-Fi.jpg",
+            "anio_salida": 2011
+        },
+        {
+            "id": 9,
+            "nombre": "Game Boy Advance",
+            "descripcion": "Clásica portátil de Nintendo con una enorme biblioteca de juegos retro.",
+            "valoracion": 4.6,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg",
+            "anio_salida": 2001
+        },
+        {
+            "id": 10,
+            "nombre": "Wii U",
+            "descripcion": "Consola de Nintendo con gamepad táctil y enfoque en juegos familiares.",
+            "valoracion": 4,
+            "imagen": "https://www.nintendo.com/eu/media/images/10_share_images/systems_11/wii_u_11/H2x1_generic_WiiU.jpg",
+            "anio_salida": 2012
+        },
+        {
+            "id": 11,
+            "nombre": "Nintendo Wii",
+            "descripcion": "Consola innovadora con control de movimiento, famosa por su accesibilidad.",
+            "valoracion": 4.5,
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0gpCwDOe8G1vd8xTe970b1IHB2eJHL3sMAA&s",
+            "anio_salida": 2006
+        },
+        {
+            "id": 12,
+            "nombre": "PlayStation 3",
+            "descripcion": "Consola de Sony con gráficos avanzados para su época y gran catálogo multimedia.",
+            "valoracion": 4.3,
+            "imagen": "https://m.media-amazon.com/images/I/61kGRMEQF8L.jpg",
+            "anio_salida": 2006
+        },
+        {
+            "id": 13,
+            "nombre": "Xbox 360",
+            "descripcion": "Consola de Microsoft con gran comunidad online y juegos exclusivos.",
+            "valoracion": 4.4,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/0/03/Xbox-360-Consoles-Infobox.png",
+            "anio_salida": 2005
+        },
+        {
+            "id": 14,
+            "nombre": "Nintendo DS",
+            "descripcion": "Portátil de doble pantalla que revolucionó el mercado de los juegos portátiles.",
+            "valoracion": 4.5,
+            "imagen": "https://d2e6ccujb3mkqf.cloudfront.net/871bb05f-0e42-4ca0-a038-dd74552fdf3e-1_1206106e-5e15-443b-82d1-ab44b0c26dd3.jpg",
+            "anio_salida": 2004
+        },
+        {
+            "id": 15,
+            "nombre": "SEGA Genesis",
+            "descripcion": "Clásica consola retro con grandes juegos de los 90.",
+            "valoracion": 4.2,
+            "imagen": "https://media.gamestop.com/i/gamestop/10122933/SEGA-Genesis?w=768&h=768&fmt=auto",
+            "anio_salida": 1988
+        },
+        {
+            "id": 16,
+            "nombre": "Super Nintendo",
+            "descripcion": "Clásica consola de 16 bits con RPGs y aventuras icónicas.",
+            "valoracion": 4.7,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/18/Wikipedia_SNES_PAL.jpg",
+            "anio_salida": 1990
+        },
+        {
+            "id": 17,
+            "nombre": "PlayStation 2",
+            "descripcion": "Consola más vendida de la historia con miles de juegos y géneros diversos.",
+            "valoracion": 4.8,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/1c/PS2-Versions.jpg",
+            "anio_salida": 2000
+        },
+        {
+            "id": 18,
+            "nombre": "Xbox",
+            "descripcion": "Primera consola de Microsoft con enfoque en juegos online y gráficos 3D.",
+            "valoracion": 4.1,
+            "imagen": "https://d2e6ccujb3mkqf.cloudfront.net/ce6e79a4-634d-4bad-b714-f01d50111937-1_f6d73744-fefc-4a95-8c31-5434630398f4.jpg",
+            "anio_salida": 2001
+        },
+        {
+            "id": 19,
+            "nombre": "Neo Geo",
+            "descripcion": "Consola de SNK famosa por sus juegos arcade de alta calidad y gráficos avanzados para su época.",
+            "valoracion": 4.3,
+            "imagen": "https://i.ebayimg.com/images/g/YxoAAOSwjo9mA8HE/s-l1200.jpg",
+            "anio_salida": 1990
+        },
+        {
+            "id": 20,
+            "nombre": "Atari 2600",
+            "descripcion": "Consola icónica de Atari que popularizó los videojuegos domésticos con cartuchos intercambiables.",
+            "valoracion": 4.0,
+            "imagen": "https://atari.com/cdn/shop/files/ProductImage-AV2.jpg?v=1692711673",
+            "anio_salida": 1977
+        }
+    ],
+    "juegos": [
+        {
+            "id": 1,
+            "titulo": "Hollow Knight",
+            "descripcion": "Juego de acción y aventura metroidvania con un mundo oscuro y detallado.",
+            "anio_publicacion": 2017,
+            "valoracion": "4.9",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Hollow_Knight_first_cover_art.webp/274px-Hollow_Knight_first_cover_art.webp.png"
+        },
+        {
+            "id": 2,
+            "titulo": "Hollow Knight: Silksong",
+            "descripcion": "Secuela de Hollow Knight con nueva protagonista y habilidades.",
+            "anio_publicacion": 2025,
+            "valoracion": 5,
+            "foto": "https://cdn.cdkeys.com/496x700/media/catalog/product/h/k/hk_silksong_xbox_uk.png"
+        },
+        {
+            "id": 3,
+            "titulo": "Stardew Valley",
+            "descripcion": "Simulador de granja con agricultura, pesca y relaciones sociales.",
+            "anio_publicacion": 2016,
+            "valoracion": 4.8,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/f/fd/Logo_of_Stardew_Valley.png"
+        },
+        {
+            "id": 4,
+            "titulo": "Little Witch in the Woods",
+            "descripcion": "RPG relajante con magia, exploración y mundo encantador.",
+            "anio_publicacion": 2023,
+            "valoracion": 4.6,
+            "foto": "https://m.media-amazon.com/images/M/MV5BNmI0NjdhNmItOGE2Mi00Y2NiLTgzZDQtODNjMzFhNDQwOTUwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+        },
+        {
+            "id": 5,
+            "titulo": "Dredge",
+            "descripcion": "Exploración marina con pesca y misterios oscuros.",
+            "anio_publicacion": 2023,
+            "valoracion": 4.5,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/1/15/Dredge_Cover_Art.jpg"
+        },
+        {
+            "id": 6,
+            "titulo": "Everhood",
+            "descripcion": "Juego de ritmo y aventura con estética surrealista y combates únicos.",
+            "anio_publicacion": 2021,
+            "valoracion": 4.7,
+            "foto": "https://cdn.devuego.com/portadas/everhood-2.jpg"
+        },
+        {
+            "id": 7,
+            "titulo": "Undertale",
+            "descripcion": "RPG donde tus decisiones afectan la historia y puedes evitar combates.",
+            "anio_publicacion": 2015,
+            "valoracion": 4.9,
+            "foto": "https://m.media-amazon.com/images/M/MV5BMWI3ZTkxZjktYWU3NC00OGQ1LWFlNzgtYzIwMWI4NDg2YTU0XkEyXkFqcGc@._V1_.jpg"
+        },
+        {
+            "id": 8,
+            "titulo": "Helldivers 2",
+            "descripcion": "Shooter cooperativo top-down con humor y acción táctica.",
+            "anio_publicacion": 2015,
+            "valoracion": 4.4,
+            "foto": "https://imgproxy.eneba.games/PQ6Z5CEKnDmlfcfCK7LpuzD6YSq4MWCG6qM2BwEnb6s/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9F/NzhKVFNTa0JtZlBM/eXZ5d3RyQnVSN0pm/WDhzQ2NXeW9QSjJP/aEhRaDVvLmpwZw"
+        },
+        {
+            "id": 9,
+            "titulo": "Monster Hunter: World",
+            "descripcion": "RPG de acción cazando monstruos gigantes en un mundo abierto.",
+            "anio_publicacion": 2018,
+            "valoracion": 4.7,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Monster_Hunter_World_cover_art.jpg/250px-Monster_Hunter_World_cover_art.jpg"
+        },
+        {
+            "id": 10,
+            "titulo": "Monster Hunter: Rise",
+            "descripcion": "Cacería de monstruos con mecánicas mejoradas y nuevos escenarios.",
+            "anio_publicacion": 2021,
+            "valoracion": 4.6,
+            "foto": "https://cdn.cdkeys.com/496x700/media/catalog/product/s/a/sa.jpg"
+        },
+        {
+            "id": 11,
+            "titulo": "League of Legends",
+            "descripcion": "MOBA competitivo con estrategia y trabajo en equipo.",
+            "anio_publicacion": 2009,
+            "valoracion": 4.5,
+            "foto": "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/leagueoflegends.png"
+        },
+        {
+            "id": 12,
+            "titulo": "Celeste",
+            "descripcion": "Plataforma indie desafiante con historia emotiva y música increíble.",
+            "anio_publicacion": 2018,
+            "valoracion": 4.9,
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Celeste_box_art_full.png/250px-Celeste_box_art_full.png"
+        },
+        {
+            "id": 13,
+            "titulo": "Hades",
+            "descripcion": "Roguelike de acción con narrativa profunda y combates fluidos.",
+            "anio_publicacion": 2020,
+            "valoracion": 5,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/c/cc/Hades_cover_art.jpg"
+        },
+        {
+            "id": 14,
+            "titulo": "Cuphead",
+            "descripcion": "Run & gun con estética de dibujos animados clásicos y dificultad alta.",
+            "anio_publicacion": 2017,
+            "valoracion": 4.8,
+            "foto": "https://image.api.playstation.com/vulcan/img/cfn/11307fd0s0uyV-ba4dy5E9qskf6CIntl28sAerYTFbYC7vPUBrfgp7zokliHVbVoJ5ghylOBamo2Q2i5pbEYxQKFnSsiLHaY.png"
+        },
+        {
+            "id": 15,
+            "titulo": "Ori and the Blind Forest",
+            "descripcion": "Plataforma y aventura con un arte visual impresionante y música épica.",
+            "anio_publicacion": 2015,
+            "valoracion": 4.9,
+            "foto": "https://static.wikia.nocookie.net/oriandtheblindforest/images/6/66/Gamescom-key-art_psd_jpgcopy.jpg/revision/latest/thumbnail/width/360/height/450?cb=20140812191613"
+        },
+        {
+            "id": 16,
+            "titulo": "Ori and the Will of the Wisps",
+            "descripcion": "Secuela de Ori con más exploración, combates y narrativa emotiva.",
+            "anio_publicacion": 2020,
+            "valoracion": 5,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/9/94/Ori_and_the_Will_of_the_Wisps.jpg"
+        },
+        {
+            "id": 17,
+            "titulo": "Dead Cells",
+            "descripcion": "Roguelike metroidvania con combate rápido y niveles generados proceduralmente.",
+            "anio_publicacion": 2018,
+            "valoracion": 4.7,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/1/1f/Dead_cells_cover_art.png"
+        },
+        {
+            "id": 18,
+            "titulo": "The Binding of Isaac: Rebirth",
+            "descripcion": "Roguelike de acción con mazmorras aleatorias y enemigos extraños.",
+            "anio_publicacion": 2014,
+            "valoracion": 4.6,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/e/e1/The_Binding_of_Issac_Rebirth_cover.jpg"
+        },
+        {
+            "id": 19,
+            "titulo": "Terraria",
+            "descripcion": "Sandbox de aventuras, construcción y exploración con elementos RPG.",
+            "anio_publicacion": 2011,
+            "valoracion": 4.7,
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Terraria_Steam_artwork.jpg/250px-Terraria_Steam_artwork.jpg"
+        },
+        {
+            "id": 20,
+            "titulo": "Slay the Spire",
+            "descripcion": "Juego de cartas roguelike con mecánicas estratégicas y rejugabilidad alta.",
+            "anio_publicacion": 2019,
+            "valoracion": 4.8,
+            "foto": "https://image.api.playstation.com/cdn/EP3717/CUSA15338_00/Sn5xbNutqfQdWYIjbeCIN0bwTJOV7UPG.png"
+        },
+        {
+            "id": 21,
+            "titulo": "aaa",
+            "descripcion": "a",
+            "anio_publicacion": "78",
+            "valoracion": "0.3",
+            "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Hollow_Knight_first_cover_art.webp/274px-Hollow_Knight_first_cover_art.webp.png"
+        }
+    ]
+}

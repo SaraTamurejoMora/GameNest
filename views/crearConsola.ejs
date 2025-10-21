@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crear Consola</title>
   <link rel="icon" href="data:,">
 </head>
+
 <body>
   <header>
     <h1>Crear nueva consola</h1>
@@ -16,11 +18,18 @@
       <label for="nombre">Nombre:</label>
       <input id="nombre" name="nombre" type="text" required>
 
+      
+
       <label for="imagen">URL de imagen:</label>
       <input id="imagen" name="imagen" type="text" required>
 
       <label for="valoracion">Valoración:</label>
       <input id="valoracion" name="valoracion" type="number" step="0.1" required>
+
+      <label for="anio_salida">Año salida:</label>
+      <input id="anio_salida" name="anio_salida" required>
+
+
 
       <button type="submit">Crear consola</button>
     </form>
@@ -28,4 +37,5 @@
     <p><a href="/consoles">Volver al listado</a></p>
   </main>
 </body>
+
 </html>

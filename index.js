@@ -24,6 +24,8 @@ app.use((req,res,next)=>{
     try{
         const data=jwt.verify(token,SECRET_JWT_KEY)
         req.session.user=data
+
+        //if(session.user == null) res.redirect("/protected")
     }catch(error){
         req.session.user=null
     }

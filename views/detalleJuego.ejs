@@ -11,10 +11,11 @@
   </header>
 
   <main>
-    <p><strong>ID:</strong> <%= juego.id %></p>
+    
     <p><strong>Valoración:</strong> <%= juego.valoracion %></p>
     <img src="<%= juego.foto %>" alt="<%= juego.titulo %>" style="max-width:300px; display:block; margin:1rem 0;">
-
+    <h2>Descripción</h2>
+    <p><%= juego.descripcion %></p>
     <a href="/games">Volver al listado</a> |
     <a href="/games/editGames/<%= juego.id %>">Editar</a>
   </main>
