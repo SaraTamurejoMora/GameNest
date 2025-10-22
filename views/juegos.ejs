@@ -9,57 +9,70 @@
 </head>
 
 <body>
-    <h1>Lista de juegos</h1>
+    <header class="header">
+        <a href="/protected" class="btn-volver">Volver</a>
+        <h1 class="titulo-header">GameNest</h1>
+    </header>
 
-    <a href="/protected">
-        <button>Volver</button>
-    </a>
+    <h1>Lista de juegos</h1>
 
     <a href="/games/crear">
         <button>Crear nuevo juego</button>
     </a>
 
     <div class="listaJuego">
-        <% juegos.forEach(juego => { %>
+        <% juegos.forEach(juego=> { %>
             <div class="juego">
                 <img class="imagenJuego" src="<%= juego.foto %>" alt="<%= juego.titulo %>">
-                <h2 class="tituloJuego"><%= juego.titulo %></h2>
-                <h3 class="valoracionesJuego"><%= juego.valoracion %></h3>
+                <h2 class="tituloJuego">
+                    <%= juego.titulo %>
+                </h2>
+                <h3 class="valoracionesJuego">
+                    <%= juego.valoracion %>
+                </h3>
 
-                <!-- Botones de acción en fila con iconos -->
+                <!-- Botones: Ver + Editar (fila) y Eliminar (debajo) -->
                 <div class="botones">
-                    <a href="/games/<%= juego.id %>">
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                            </svg>
-                            Ver
-                        </button>
-                    </a>
+                    <div class="botones-superiores">
+                        <a href="/games/<%= juego.id %>">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                Ver
+                            </button>
+                        </a>
 
-                    <a href="/games/editGames/<%= juego.id %>">
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path d="M12 20h9"></path>
-                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                            </svg>
-                            Editar
-                        </button>
-                    </a>
+                        <a href="/games/editGames/<%= juego.id %>">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M12 20h9"></path>
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                </svg>
+                                Editar
+                            </button>
+                        </a>
+                    </div>
 
-                    <form action="/games/<%= juego.id %>?_method=DELETE" method="POST" onsubmit="return confirm('¿Seguro que quieres borrar este juego?');">
-                        <button type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                            Eliminar
-                        </button>
-                    </form>
+                    <div class="boton-eliminar">
+                        <form action="/games/<%= juego.id %>?_method=DELETE" method="POST"
+                            onsubmit="return confirm('¿Seguro que quieres borrar este juego?');">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                                Eliminar
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        <% }) %>
+            <% }) %>
     </div>
 
 </body>

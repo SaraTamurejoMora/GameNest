@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
 }
 
-/* Título principal */
+/* Título principal (páginas que no usan header custom) */
 h1 {
   font-size: 3.5rem;
   margin-bottom: 2rem;
@@ -32,7 +32,7 @@ h1 {
   text-align: center;
 }
 
-/* Botones Volver y Crear */
+/* Botones sueltos (Volver / Crear) */
 a > button {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
@@ -52,7 +52,7 @@ a > button:hover {
   transform: translateY(-2px) scale(1.05);
 }
 
-/* Contenedor de tarjetas */
+/* Contenedor de tarjetas (listado) */
 .listaJuego {
   display: flex;
   flex-wrap: wrap;
@@ -67,11 +67,14 @@ a > button:hover {
   color: var(--text);
   border: 2px solid var(--border);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.8rem;
   width: 280px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-family: 'VT323', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .juego:hover {
@@ -79,39 +82,54 @@ a > button:hover {
   box-shadow: 0 0 15px var(--accent);
 }
 
-/* Imagen uniforme para todas las tarjetas, más grande y alta */
-.imagenJuego, .icon img, .animated-img {
+/* Imagen de tarjeta — rectangular y alta */
+.imagenJuego {
   width: 260px;
-  height: 280px;
+  height: 340px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid var(--border);
 }
 
-/* Títulos y valoraciones de tarjetas */
+/* Títulos y valoraciones */
 .tituloJuego {
   font-size: 1.7rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .valoracionesJuego {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
 }
 
-/* Botones de acción en fila debajo de la valoración */
+/* Botones de acción en tarjeta */
 .botones {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.4rem;
+  border-top: 2px solid var(--border);
+  gap: 0.4rem;
 }
 
-.botones button {
+/* Ver + Editar (misma fila) */
+.botones-superiores {
   display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.botones-superiores button {
+  flex: 1;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 0.6rem;
   font-size: 1rem;
   background: var(--border);
   color: var(--screen);
@@ -121,8 +139,34 @@ a > button:hover {
   transition: all 0.2s ease;
 }
 
-.botones button:hover {
+/* Eliminar debajo — MISMO tamaño */
+.boton-eliminar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.boton-eliminar button {
+  flex: 1;
+  max-width: 100px;        /* igual que Ver y Editar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+  background: #a02020;     /* rojo retro */
+  color: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botones-superiores button:hover,
+.boton-eliminar button:hover {
   background: var(--accent);
+  color: var(--text);
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -132,12 +176,13 @@ a > button:hover {
   height: 16px;
 }
 
-/* Menú horizontal (opcional) */
+/* Menú horizontal (home) */
 .menu-horizontal {
   display: flex;
   gap: 5rem;
   justify-content: center;
   margin-bottom: 4rem;
+  margin-top: 3rem;            /* ↓ baja el bloque del menú */
 }
 
 .menu-item {
@@ -149,6 +194,7 @@ a > button:hover {
   color: var(--text);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-size: 2rem;
+  margin-top: 0.5rem;          /* ↓ baja un poco cada item */
 }
 
 .menu-item:hover {
@@ -156,10 +202,20 @@ a > button:hover {
   text-shadow: 0 0 10px var(--accent);
 }
 
-/* Animación flotante para imágenes en menú */
+/* Imágenes del menú (home) — tamaño correcto y SIN borde */
+.menu-horizontal .icon img,
+.menu-horizontal .animated-img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: contain !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+/* Animación flotante para iconos del menú */
 .animated-img {
-  width: 120px;
-  height: 120px;
   transition: transform 0.3s ease;
   animation: float 2s ease-in-out infinite alternate;
 }
@@ -170,10 +226,10 @@ a > button:hover {
 }
 
 .menu-item:hover .animated-img {
-  transform: translateY(-20px) scale(1.15);
+  transform: translateY(-20px) scale(1.05);
 }
 
-/* Botón de volver en menú */
+/* Botón de volver genérico */
 .btn-back {
   padding: 0.8rem 1.5rem;
   font-size: 1.5rem;
@@ -190,3 +246,89 @@ a > button:hover {
   background: var(--accent);
   transform: translateY(-4px) scale(1.1);
 }
+
+/* --- HEADER --- */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* centra el título */
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: var(--screen);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--border);
+}
+
+.titulo-header {
+  font-size: 3rem;
+  color: var(--text);
+  text-shadow: 2px 2px var(--border);
+  letter-spacing: 3px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Botón Volver dentro del header */
+.btn-volver {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.3rem;
+  background: var(--border);
+  color: var(--screen);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'VT323', monospace;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-volver:hover {
+  background: var(--accent);
+  color: var(--text);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .titulo-header { font-size: 2.2rem; }
+  .btn-volver { font-size: 1.1rem; padding: 0.5rem 1rem; }
+
+  .juego { width: 90%; }
+
+  .imagenJuego {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 11 / 15; /* mantiene un rectángulo alto sin forzar recorte */
+  }
+
+  .botones-superiores button,
+  .boton-eliminar button {
+    max-width: none;
+    flex: 1;
+  }
+
+  .menu-horizontal { margin-top: 2.5rem; }
+}
+
+.titulo-header {
+  font-size: 3rem;
+  color: var(--text);
+  text-shadow:
+    0 0 8px var(--accent),
+    0 0 16px var(--border),
+    2px 2px var(--border);
+  letter-spacing: 3px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 8px var(--accent), 2px 2px var(--border); }
+  50% { text-shadow: 0 0 20px var(--accent), 0 0 10px var(--border); }
+}
+
+
