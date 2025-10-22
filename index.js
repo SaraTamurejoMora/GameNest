@@ -32,6 +32,7 @@ app.use((req,res,next)=>{
     next() 
 })
 
+//poner coso entre games y gamesRoutes ()
 app.use('/games', gamesRoutes);
 app.use('/consoles', consolesRoutes);
 
