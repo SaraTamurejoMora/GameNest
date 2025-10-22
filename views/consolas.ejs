@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consolas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Consolas</title>
 </head>
 
 <body>
-    <h1>Lista de consolas</h1>
+  <header class="header">
+    <a href="/protected" class="btn-volver">Volver</a>
+    <h1 class="titulo-header">GameNest</h1>
+  </header>
 
-    <a href="/protected">
-        <button style="margin-bottom:1rem;">Volver</button>
-    </a>
+  <h1>Lista de consolas</h1>
 
-    <a href="/consoles/crear">
-        <button style="margin-bottom:1rem;">Crear nueva consola</button>
-    </a>
+  <a href="/consoles/crear">
+    <button>Crear nueva consola</button>
+  </a>
 
+  <div class="listaConsola">
+    <% consolas.forEach(consola => { %>
+      <div class="consola">
+        <img class="imagenConsola" src="<%= consola.imagen %>" alt="<%= consola.nombre %>">
 
-    <div class="listaConsola">
-        <% consolas.forEach(consola=>{ %>
-            <div class="consola">
-                <img class="imagenConsola" src="<%= consola.imagen %>" alt="">
-                <h2 class="tituloConsola">
-                    <%= consola.nombre %>
-                </h2>
-                <h3 class="valoracionesConsola">
-                    <%= consola.valoracion%>
-                </h3>
-                <span><a href="/consoles/<%=consola.id %>">Ver</a></span>
-                <span><a href="/consoles/editConsola/<%=consola.id %>">Editar</a></span>
-                <form action="/consoles/<%= consola.id %>?_method=DELETE" method="POST"
-                    onsubmit="return confirm('¿Seguro que quieres borrar esta consola?');" style="margin-top:1rem">
-                    <button type="submit">Eliminar</button>
-                </form>
+        <h2 class="tituloConsola"><%= consola.nombre %></h2>
+        <h3 class="valoracionesConsola"><%= consola.valoracion %></h3>
 
-
-            </div>
-            <% }) %>
-    </div>
-
+        <div class="botones">
+          <div class="botones-superiores">
+            <a href="/consoles/<%= consola.id %>">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Ver
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
 </body>
 
 </html>

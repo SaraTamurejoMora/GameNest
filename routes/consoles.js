@@ -51,7 +51,7 @@ router.post('/',(req,res) => {
     const data = readData();
     const { imagen, nombre, valoracion} = req.body;
     if (!imagen || !nombre|| !valoracion) return res.status(400).send('Necesitas rellenar todos los campos');
-    const nuevaConsola = { id: data.consolas.length + 1, imagen, nombre, valoracion };
+    const nuevaConsola = { id: crearIdUnicoConsola(data), imagen, nombre, valoracion };
     data.consolas.push(nuevaConsola);
     writeData(data);
      const newdata = readData();
@@ -73,8 +73,6 @@ router.put('/:id', (req, res) => {
 });
 
 
-
-
 //eliminar -- delete
 
 router.delete('/:id', (req, res) => {
@@ -87,6 +85,15 @@ router.delete('/:id', (req, res) => {
     const newdata = readData();
     res.render ("consolas", newdata);
 });
+
+function crearIdUnicoConsola(data) {
+  const id = Math.floor(1000000000 + Math.random() * 9000000000);
+  const existe = data.consolas.findIndex(c => c.id === id);
+  if(existe === -1){
+     return id;
+  }
+  return crearIdUnicoConsola(data);
+}
 
 
 export default router;

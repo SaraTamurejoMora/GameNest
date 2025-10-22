@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
   <title><%= juego.titulo %> - Detalle</title>
 </head>
+
 <body>
-  <header>
-    <h1><%= juego.titulo %></h1>
+  <header class="header">
+    <a href="/games" class="btn-volver">Volver</a>
+    <h1 class="titulo-header">GameNest</h1>
   </header>
 
-  <main>
-    
-    <p><strong>Valoración:</strong> <%= juego.valoracion %></p>
-    <img src="<%= juego.foto %>" alt="<%= juego.titulo %>" style="max-width:300px; display:block; margin:1rem 0;">
-    <h2>Descripción</h2>
-    <p><%= juego.descripcion %></p>
-    <a href="/games">Volver al listado</a> |
-    <a href="/games/editGames/<%= juego.id %>">Editar</a>
+  <h1>Detalle de juego</h1>
+
+  <main class="detalle-juego">
+    <section class="detalle-card">
+      <div class="detalle-media">
+        <img class="detalle-img" src="<%= juego.foto %>" alt="<%= juego.titulo %>" />
+      </div>
+
+      <div class="detalle-info">
+        <h2 class="detalle-titulo"><%= juego.titulo %></h2>
+
+        <div class="detalle-meta">
+          <span class="badge">
+            <!-- estrella -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l4.46 4.73L5.82 21z" />
+            </svg>
+            <strong><%= juego.valoracion %></strong>
+          </span>
+        </div>
+
+        <h3 class="detalle-subtitulo">Descripción</h3>
+        <p class="detalle-descripcion"><%= juego.descripcion %></p>
+
+        <div class="detalle-acciones">
+          <a href="/games/editGames/<%= juego.id %>" class="btn-accion">
+            <!-- lápiz -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+            Editar
+          </a>
+
+          <form action="/games/<%= juego.id %>?_method=DELETE" method="POST"
+            onsubmit="return confirm('¿Seguro que quieres borrar este juego?');">
+            <button type="submit" class="btn-eliminar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              Eliminar
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>

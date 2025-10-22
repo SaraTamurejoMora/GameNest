@@ -25,16 +25,28 @@ app.use((req,res,next)=>{
         const data=jwt.verify(token,SECRET_JWT_KEY)
         req.session.user=data
 
-        //if(session.user == null) res.redirect("/protected")
     }catch(error){
         req.session.user=null
     }
     next() 
 })
 
+/*otro middleware para que los usuarios que no 
+estén registrados no puedan 
+ir a otras páginas
+*/
+
+export const requireAuth = (req, res, next) => {
+  if (!req.session.user) {
+    return res.redirect("/protected");
+  }
+  next();
+};
+
+
 //poner coso entre games y gamesRoutes ()
-app.use('/games', gamesRoutes);
-app.use('/consoles', consolesRoutes);
+app.use('/games', requireAuth, gamesRoutes);
+app.use('/consoles',requireAuth, consolesRoutes);
 
 app.get('/',(req,res)=>{
     const {user}=req.session

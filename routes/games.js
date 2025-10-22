@@ -67,8 +67,6 @@ router.get('/:id',(req,res) => {
 } )
 
 
-
-
 //crear --post
 
 router.post('/',(req,res) => {
@@ -76,7 +74,7 @@ router.post('/',(req,res) => {
     const data = readData();
     const { foto, titulo, valoracion} = req.body;
     if (!foto || !titulo|| !valoracion) return res.status(400).send('Necesitas rellenar todos los campos');
-    const nuevoJuego = { id: data.juegos.length + 1, imagen, titulo, valoracion };
+    const nuevoJuego = { id: crearIdUnicoJuego(data), imagen, titulo, valoracion };
     data.juegos.push(nuevoJuego);
     writeData(data);
     res.json(nuevoJuego);
@@ -108,6 +106,14 @@ router.delete('/:id', (req, res) => {
     res.render ("juegos", newdata);
 });
 
+function crearIdUnicoJuego(data) {
+  const id = Math.floor(1000000000 + Math.random() * 9000000000);
+  const existe = data.juegos.findIndex(c => c.id === id);
+  if(existe){
+     return crearIdUnicoJuego(data)
+  }
+  return id;
+}
 
 
 export default router;

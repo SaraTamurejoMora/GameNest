@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
   <title>Crear Juego</title>
-  <link rel="icon" href="data:,">
 </head>
+
 <body>
-  <header>
-    <h1>Crear nuevo juego</h1>
+  <header class="header">
+    <a href="/games" class="btn-volver">Volver</a>
+    <h1 class="titulo-header">GameNest</h1>
   </header>
 
-  <main>
-    <form action="/games" method="POST">
+  <h1>Crear nuevo juego</h1>
+
+  <main class="formulario-editar">
+    <form action="/games" method="POST" class="form-card">
+      <h2 class="form-titulo">Registrar juego</h2>
+
       <label for="titulo">Título:</label>
       <input id="titulo" name="titulo" type="text" required>
 
@@ -28,10 +35,17 @@
       <label for="foto">URL de imagen:</label>
       <input id="foto" name="foto" type="text" required>
 
-      <button type="submit">Crear juego</button>
+      <button type="submit" class="btn-accion">
+        <!-- icono de más -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+             stroke-width="2" viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        Crear juego
+      </button>
     </form>
-
-    <p><a href="/games">Volver al listado</a></p>
   </main>
 </body>
+
 </html>
