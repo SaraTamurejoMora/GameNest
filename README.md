@@ -15,6 +15,25 @@ Esto evita que alguien escriba directamente la URL o se cuele en páginas que no
 Solo los usuarios que han iniciado sesión pueden **crear, editar o borrar** cosas.
 
 ---
+## Registro y autenticación
+
+La aplicación tiene una parte de **registro e inicio de sesión** para los usuarios.
+
+La vista `register.ejs` muestra un formulario muy simple donde el usuario puede crear una cuenta nueva.  
+Esta página está pensada para ser la puerta de entrada: si no estás logueado, no puedes acceder a `/protected`, ni a ninguna ruta de **juegos** o **consolas**.
+
+En el backend, hay un **middleware** que se encarga de comprobar si el usuario tiene sesión activa antes de permitir el acceso a las rutas privadas.  
+Si intentas entrar a una ruta protegida sin estar autenticado, te redirige a una página que muestra un mensaje tipo *“No tienes acceso”*.
+
+**Flujo de usuario:**
+1. Te registras desde `/register`.
+2. El sistema guarda tu usuario.
+3. Luego puedes iniciar sesión.
+4. Si el login es correcto, ya puedes acceder a `/protected`, `/games` o `/consoles`.
+
+Así evito que la gente entre escribiendo rutas directamente sin tener permisos.
+
+---
 
 
 ## Qué hace la aplicación
@@ -28,7 +47,6 @@ Solo los usuarios que han iniciado sesión pueden **crear, editar o borrar** cos
 
 ---
 
----
 
 ## Rutas principales
 
